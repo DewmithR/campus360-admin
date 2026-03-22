@@ -1,0 +1,63 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Firebase credentials — NEVER commit
+src/firebase.js
+.env
+.env.local
+.env.production
+.env.development
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+```
+
+>Notice `src/firebase.js` is in the ignore list — it contains your Firebase config keys. Each developer should create it locally. More on this below.
+
+---
+
+### What NOT to upload
+```
+node_modules/       ← never, it's huge (100k+ files)
+dist/               ← build output, not source
+.env                ← secrets
+src/firebase.js     ← Firebase credentials
